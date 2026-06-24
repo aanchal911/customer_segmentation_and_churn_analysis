@@ -23,17 +23,21 @@
 
 ```
 customer_segmentation_and_churn_analysis/
-├── 🤖 churn_app/                     ← AGENTIC DASHBOARD
-│   ├── app.py                        ← Main Streamlit application
-│   ├── requirements.txt              ← Dependencies
-│   ├── Dockerfile & docker-compose.yml  ← Container setup
-│   ├── data/Telco_customer_churn.xlsx   ← Dataset
-│   ├── CBSOT.ipynb                   ← Dashboard notebook version
-│   └── screenshots/                  ← Demo images
-├── 📊 CBSOT_churnanalysis.ipynb      ← MAIN ANALYSIS NOTEBOOK
-├── 📈 CBSOT_sections8_10.ipynb       ← ADVANCED SECTIONS
-├── 🔄 Churn_Agent_Pipeline.ipynb     ← AUTOMATED PIPELINE
-└── 📋 Telco_customer_churn.xlsx      ← Raw dataset
+├── 🤖 churn_app/                           ← AGENTIC DASHBOARD
+│   ├── app.py                              ← Main Streamlit application
+│   ├── requirements.txt                    ← Dependencies
+│   ├── Dockerfile & docker-compose.yml        ← Container setup
+│   ├── data/Telco_customer_churn.xlsx         ← Dataset
+│   ├── dashboard_notebook_version.ipynb        ← Dashboard in notebook format
+│   └── screenshots/                        ← Demo images
+├── 📂 notebooks/                            ← ANALYSIS NOTEBOOKS
+│   ├── 01_basic_analysis/
+│   │   └── customer_churn_analysis_complete.ipynb  ← Complete EDA + ML + Segmentation
+│   ├── 02_advanced_techniques/
+│   │   └── advanced_ml_techniques.ipynb         ← Hyperparameter tuning + Ensembles
+│   └── 03_automated_pipeline/
+│       └── automated_churn_pipeline.ipynb       ← End-to-end automation
+└── 📋 Telco_customer_churn.xlsx              ← Raw dataset
 ```
 
 ---
@@ -112,10 +116,15 @@ docker run -p 8501:8501 churn-dashboard
 
 | 📖 **Notebook** | 📝 **Focus** | 🎮 **Level** | 🔗 **Quick Access** |
 |:---|:---|:---:|:---|
-| **CBSOT_churnanalysis.ipynb** | Complete end-to-end analysis with EDA, modeling & segmentation | 🟢 Beginner | [Open Main Analysis](../CBSOT_churnanalysis.ipynb) |
-| **CBSOT_sections8_10.ipynb** | Advanced techniques, hyperparameter tuning, ensemble methods | 🟡 Advanced | [Open Advanced](../CBSOT_sections8_10.ipynb) |
-| **Churn_Agent_Pipeline.ipynb** | Automated ML pipeline with agent-like behavior | 🔴 Expert | [Open Pipeline](../Churn_Agent_Pipeline.ipynb) |
-| **churn_app/CBSOT.ipynb** | Dashboard logic in notebook format for customization | 🟠 Custom | [Open Dashboard Logic](CBSOT.ipynb) |
+| **Customer Churn Analysis Complete** | End-to-end analysis: EDA → ML Models → Customer Segmentation | 🟢 Beginner | [Open Complete Analysis](../notebooks/01_basic_analysis/customer_churn_analysis_complete.ipynb) |
+| **Advanced ML Techniques** | Hyperparameter tuning, ensemble methods, model optimization | 🟡 Advanced | [Open Advanced Techniques](../notebooks/02_advanced_techniques/advanced_ml_techniques.ipynb) |
+| **Automated Churn Pipeline** | Fully automated ML pipeline with minimal human intervention | 🔴 Expert | [Open Automated Pipeline](../notebooks/03_automated_pipeline/automated_churn_pipeline.ipynb) |
+| **Dashboard Notebook Version** | Streamlit dashboard logic in notebook format for customization | 🟠 Custom | [Open Dashboard Logic](dashboard_notebook_version.ipynb) |
+
+### 📚 **Learning Path Recommendation:**
+```
+🎆 Start Here → 🟢 Complete Analysis → 🟡 Advanced Techniques → 🔴 Automated Pipeline → 🟠 Custom Dashboard
+```
 
 ### 🚀 **Launch Jupyter Environment**
 
@@ -126,11 +135,14 @@ docker run -p 8501:8501 churn-dashboard
 # Install Jupyter (if not already installed)
 pip install jupyter notebook
 
+# Navigate to notebooks folder
+cd notebooks/
+
 # Launch Jupyter
 jupyter notebook
 
 # Opens in browser automatically
-# Navigate to desired .ipynb file
+# Start with: 01_basic_analysis/customer_churn_analysis_complete.ipynb
 ```
 </details>
 
@@ -141,10 +153,14 @@ jupyter notebook
 # Install JupyterLab
 pip install jupyterlab
 
+# Navigate to project root
+cd customer_segmentation_and_churn_analysis/
+
 # Launch JupyterLab
 jupyter lab
 
 # Enhanced interface with file explorer, terminal, etc.
+# Navigate to notebooks/ folder in the sidebar
 ```
 </details>
 
@@ -153,14 +169,15 @@ jupyter lab
 
 ```bash
 # Create conda environment
-conda create -n churn-analysis python=3.11
-conda activate churn-analysis
+conda create -n customer-churn-analysis python=3.11
+conda activate customer-churn-analysis
 
 # Install packages
 conda install pandas numpy matplotlib seaborn scikit-learn jupyter
 pip install streamlit openpyxl
 
-# Launch
+# Navigate and launch
+cd notebooks/01_basic_analysis/
 jupyter notebook
 ```
 </details>
