@@ -1,4 +1,4 @@
-# 📊 Customer Segmentation and Churn Analysis Suite
+# 📊 Customer Segmentation and Churn Analysis 
 
 > **An advanced ML analytics platform with multiple implementation approaches - from interactive Jupyter notebooks to production-ready agentic dashboards!**
 
