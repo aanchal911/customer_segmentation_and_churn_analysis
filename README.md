@@ -231,19 +231,19 @@ az container create --resource-group myResourceGroup --name churn-dashboard --im
 <summary><b>🔍 Click to View Dashboard Screenshots</b></summary>
 
 ### EDA Dashboard - Auto Data Exploration
-![EDA Overview](Screenshot%202026-06-24%20175045.png)
+![EDA Overview](churn_app/Screenshot%202026-06-24%20175045.png)
 *Automatic data profiling, missing value analysis, and correlation discovery*
 
 ### Model Training & Comparison - AI Model Selection
-![Model Comparison](Screenshot%202026-06-24%20175105.png)
+![Model Comparison](churn_app/Screenshot%202026-06-24%20175105.png)
 *Side-by-side performance metrics for Random Forest, Gradient Boosting & Logistic Regression*
 
 ### Customer Segmentation - Intelligent Clustering
-![Customer Segments](Screenshot%202026-06-24%20175120.png)
+![Customer Segments](churn_app/Screenshot%202026-06-24%20175120.png)
 *Automated KMeans clustering with optimal k-selection and segment profiling*
 
 ### Business Recommendations - Actionable Insights
-![Recommendations](Screenshot%202026-06-24%20175140.png)
+![Recommendations](churn_app/Screenshot%202026-06-24%20175140.png)
 *Revenue-at-risk analysis and targeted retention strategies per customer segment*
 
 </details>
